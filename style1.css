@@ -1,53 +1,82 @@
 body {
-  background-color: #919473;
+  background-color: #2c3e50;
+  background-size: contain;
+  
   margin: 20px;
   padding: 20px;
+
+  .responsive-box {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  @media (max-width: 600px) {
+    .responsive-box {
+      background-color: rgb(97, 55, 92);
+    }
+  }
+  
+  @media (min-width: 601px) {
+    .responsive-box {
+      background-color: rgb(194, 170, 225);
+    }
+  }
 }
 h1{
-  color: #2a3248c1;
+  color: #e1e2e1;
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 h2{
-  color: #2a3248c1;
+  color: #e1e2e1;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   li{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 18px;
-    color: #2a3248c1;
+    color: #e1e2e1;
   }
 .image{
   display: block;
   justify-content: center;  
   margin-left: auto;
   margin-right: auto;
-  border: #233a42 5px solid;
+  border: #34495e 5px solid;
   border-radius: 50%;
 border-width: 10px;}
   
-.insta{
-  border: #233a42 10px solid;
-  height: 50px;
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    height: auto;
+  }
+
+  .box {
+    
+    padding: 20px;
+    text-align: center;
+    height: 10px;
+  }
 }
 pre {
   font-family: "Courier New", Courier, monospace;
   font-size: 16px;
-  color: #121211;
+  color: #e1e2e1;
 }
 table {
   width: 100%;
   border-collapse: collapse;
-  border: #1b1e24;
+  border: #e1e2e1 2px solid;
 }
 th {
-  border: 1px solid #080b10;
+  border: 1px solid #34495e;
   padding: 8px;
   text-align: left;
   background-color: #6c7258;
 }
 td {
-  border: 1px solid #080b10;
+  border: 1px solid #e1e2e1;
   padding: 8px;
 }
 form{
@@ -104,22 +133,7 @@ input[type="submit"] {
         to {
           left: 100px;
         }
-      }
-      .insta{
-        width: 50px;
-        height: 50px;
-        background-color: rgb(10, 138, 155);
-        position: relative;
-        animation: move 2s infinite alternate;
-      }
-      
-      @keyframes move {
-        from {
-          left: 0;
-        }
-        to {
-          left: 100px;
-        }
+    
       }
       .pseudo-list li:nth-child(odd) {
         display: block;
@@ -137,6 +151,7 @@ input[type="submit"] {
       
       .filter-image:hover {
         filter: grayscale(0%);
+        transition: ease-in-out, transform 0.5s ease-in-out;
       }
       .quote {
         position: relative;
@@ -152,3 +167,14 @@ input[type="submit"] {
         top: 0;
         color: lightgray;
       }
+      .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+  
+  .grid-item {
+    background-color: lightgreen;
+    padding: 20px;
+    text-align: center;
+  }
